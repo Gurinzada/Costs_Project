@@ -1,0 +1,47 @@
+@import './buttons.scss';
+
+.Form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.Content{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: center;
+}
+
+.Input{
+    border-radius: 24px;
+    box-shadow: 0px 4.5px 15px 0px rgba(212,212,212,1);
+    border: 2px solid #000;
+    background-color: #d4d4d4;
+    height: 2.5rem;
+    padding-left: 0.75rem;
+    width: 21.875rem;
+}
+
+.Labels{
+    padding-left: 0.5rem;
+}
+
+.TitleNewProject{
+    font-size: 1.85rem;
+}
+
+.BtnSend{
+    @include bntToCreate;
+}
+
+.Success{
+    align-items: center;
+    color: #109404;
+    display: flex;
+    justify-content: center;
+}

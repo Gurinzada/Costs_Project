@@ -5,17 +5,20 @@
 }
 
 .Layout{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 2fr 0.5fr;
+    height: 100vh;
+    gap: 2rem;
 }
 
 .HeaderContainer{
+    align-items: center;
     background-color: #f2182b;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 2rem 2rem 2rem 2rem
+    padding: 1rem 2rem 1rem 2rem;
 }
 
 .NavBar{
@@ -50,6 +53,7 @@ a{
 main{
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -57,8 +61,9 @@ footer{
     align-items: center;
     background-color: #313131;
     display: flex;
-    justify-content: space-around;
-    padding: 2rem 2rem 2rem 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 2rem 1rem 2rem;
 }
 
 .Same{

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import styles from "../styles/FormProject.module.scss"
 
 export default function FormProject(){
 
@@ -27,7 +28,7 @@ export default function FormProject(){
             const divFor = document.getElementById('BntDiv')
             const responseOk = document.createElement("div")
             responseOk.innerText = "Success"
-            responseOk.classList.add("Success")
+            responseOk.classList.add(`${styles.Success}`)
 
             divFor.append(responseOk)
 
@@ -41,19 +42,19 @@ export default function FormProject(){
         setOptionProject("")
     }
     return(
-        <form action="" method="post" onSubmit={handleSubmit}>
-            <h3>New Project here!</h3>
-            <div className="Content">
-                <label htmlFor="Name">Project Name</label>
-                <input type="text" name="" id="Name" required onChange={(e) => setTitle(e.target.value)} value={title}/>
+        <form action="" method="post" onSubmit={handleSubmit} className={styles.Form}>
+            <h3 className = {styles.TitleNewProject}>New Project here!</h3>
+            <div className={styles.Content}>
+                <label htmlFor="Name" className={styles.Labels}>Project Name</label>
+                <input type="text" name="" id="Name" required onChange={(e) => setTitle(e.target.value)} value={title} className={styles.Input}/>
             </div>
-            <div className="Content">
-                <label htmlFor="ValueProject">Project's value</label>
-                <input type="number" name="" id="ValueProject" min={0} step={0.01} onChange={(e) => setValueProject(e.target.value)} value={valueProject}/>
+            <div className={styles.Content}>
+                <label htmlFor="ValueProject" className={styles.Labels}>Project's value</label>
+                <input type="number" name="" id="ValueProject" min={0} step={0.01} onChange={(e) => setValueProject(e.target.value)} value={valueProject} className={styles.Input}/>
             </div>
-            <div className="Content">
-                <label htmlFor="OptionsForProject">Project's type</label>
-                <select name="" id="OptionsForProject" onChange={(e) => setOptionProject(e.target.value)} value={optionProject}>
+            <div className={styles.Content}>
+                <label htmlFor="OptionsForProject" className={styles.Labels}>Project's type</label>
+                <select name="" id="OptionsForProject" onChange={(e) => setOptionProject(e.target.value)} value={optionProject} className={styles.Input}>
                     <option value="" selected disabled>Choose an option</option>
                     <option value="Mobile">Mobile</option>
                     <option value="Back-End">Back-End</option>
@@ -65,7 +66,7 @@ export default function FormProject(){
                 </select>
             </div>
             <div className="BntDiv" id="BntDiv">
-                <button>Send!</button>
+                <button className = {styles.BtnSend}>Send!</button>
             </div>
         </form>
     )

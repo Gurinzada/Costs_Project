@@ -1,22 +1,40 @@
 {
   "projects": [
     {
-      "id": "2ca9",
       "Title": "Money Tracker",
-      "Value": "1000.00",
-      "OptionProject": "FullStack"
-    },
-    {
-      "id": "9b6e",
-      "Title": "App for Elders",
-      "Value": "2000",
-      "OptionProject": "Mobile"
+      "Value": "2500.00",
+      "OptionProject": "FullStack",
+      "id": "2ca9"
     },
     {
       "Title": "SoftwareTest for API",
       "Value": "2500",
       "OptionProject": "Software Test",
       "id": "53a2"
+    },
+    {
+      "id": "7db3",
+      "Title": "Node Backend Master",
+      "Value": "5000.00",
+      "OptionProject": "Back-End"
+    },
+    {
+      "id": "50af",
+      "Title": "WordPress and PHP Dev",
+      "Value": "1500.00",
+      "OptionProject": "Front-End"
+    },
+    {
+      "id": "e479",
+      "Title": "E2E Test",
+      "Value": "3500.00",
+      "OptionProject": "Software Test"
+    },
+    {
+      "id": "7a6f",
+      "Title": "DBA",
+      "Value": "5150.99",
+      "OptionProject": "DB"
     }
   ]
 }

@@ -1,0 +1,26 @@
+@import './buttons.scss';
+
+
+.ContentForNewProject{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    justify-content: center;
+}
+
+.CostImgContainer{
+    width: 36.25rem;
+}
+
+.ContainerNewProject{
+    text-align: center;
+}
+
+.NewProject{
+    @include bntToCreate;
+}
+
+.NewProject:hover{
+    margin-left: 1rem;
+}

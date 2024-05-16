@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
+import styles from "../styles/Home.module.scss"
 
 export default function Home(){
     return(
-        <section>
-            <div className="CostImg">
-                <img src="../../img/savings.svg" alt="" />
-            </div>
+        <section className={styles.ContentForNewProject}>
             <div>
-                <Link to={"/newProject"}><button>Criar novo projeto?</button></Link>
+                <img src="../../img/savings.svg" alt="" className={styles.CostImgContainer}/>
+            </div>
+            <div className={styles.ContainerNewProject}>
+                <Link to={"/newProject"}><button className={styles.NewProject}>Criar novo projeto?</button></Link>
             </div>
         </section>
 

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import styles from "../styles/FormProject.module.scss"
+import stylesCard from "../styles/Projects.module.scss"
 
 function Edit(){
     const [projects, setProjects] = useState([])
@@ -32,6 +34,9 @@ function Edit(){
         })
 
         setChange(true)
+        setName('')
+        setValue(0)
+        setOption('')
     }
 
     useEffect(() => {
@@ -40,34 +45,34 @@ function Edit(){
     },[change])
 
     return(
-        <>
-         <section>
+        <div className={stylesCard.ContainerEditContent}>
+         <section className={stylesCard.ContentForCards}>
             {projects.length > 0 ? projects.map((project) => (
                  <>
-                 <div className="CardProject">
-                     <div className="TitleCard">
+                 <div className={stylesCard.CardProject}>
+                     <div className={stylesCard.TitleContainer}>
                          <h4>{project.Title}</h4>
                      </div>
-                     <div className="ContentInfos">
-                         <span>{project.OptionProject}</span>
-                         <span>{project.Value}</span>
-                     </div>
+                     <div className={stylesCard.ContentInfos}>
+                        <div className={stylesCard.SeparatorRigth}><span>Type: {project.OptionProject}</span></div>
+                        <div className={stylesCard.SeparatorLeft}><span>Value: R${project.Value}</span></div>
+                    </div>
                  </div>
                  </>
             )):null}
         </section>
-        <form action="" method="PUT" onSubmit={handleUpdate}>
-            <div className="Content">
-                <label htmlFor="Title">Title</label>
-                <input type="text" id="Title" required value={name} onChange={(e) => setName(e.target.value)}/>
+        <form action="" method="PUT" onSubmit={handleUpdate} className={styles.Form}>
+            <div className={styles.Content}>
+                <label htmlFor="Title" className={styles.Labels}>Title</label>
+                <input type="text" id="Title" required value={name} onChange={(e) => setName(e.target.value)} className={styles.Input} placeholder="The new Project's name"/>
             </div>
-            <div className="Content">
-                <label htmlFor="Value">Title</label>
-                <input type="number" id="Value" required value={value} onChange={(e) => setValue(e.target.value)}/>
+            <div className={styles.Content}>
+                <label htmlFor="Value" className={styles.Labels}>Value</label>
+                <input type="number" id="Value" required value={value} onChange={(e) => setValue(e.target.value)} className={styles.Input}/>
             </div>
-            <div className="Content">
-            <label htmlFor="OptionsForProject">Project's type</label>
-                <select name="" id="OptionsForProject" onChange={(e) => setOption(e.target.value)} value={option}>
+            <div className={styles.Content}>
+            <label htmlFor="OptionsForProject" className={styles.Labels}>Project's type</label>
+                <select name="" id="OptionsForProject" onChange={(e) => setOption(e.target.value)} value={option} className={styles.Input}>
                     <option value="" selected disabled>Choose an option</option>
                     <option value="Mobile">Mobile</option>
                     <option value="Back-End">Back-End</option>
@@ -79,10 +84,10 @@ function Edit(){
                 </select>
             </div>
             <div>
-                <button>Save!</button>
+                <button className = {styles.BtnSend}>Save!</button>
             </div>
         </form>
-        </>
+        </div>
        
     )
 }

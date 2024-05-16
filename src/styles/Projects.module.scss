@@ -1,0 +1,78 @@
+@import "./buttons.scss";
+
+.ContentForCards{
+    align-items: center;
+    display: flex;
+    gap: 3rem 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.CardProject{
+    align-items: center;
+    background-color: #fd4c4c;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,1);
+    border: 2px solid #0000009a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    height: 15.625rem;
+    width: 21.85rem;
+}
+
+.TitleContainer{
+    border-bottom: 1px solid #000;
+    display: flex;
+    font-size: 1.15rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.ContentInfos{
+    align-items: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.SeparatorRigth{
+    border-right: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.SeparatorLeft{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ButtonsContainer{
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.EditBnt{
+    @include bntEdit;
+}
+
+.Remove{
+    @include removeBnt;
+}
+
+.ContainerEditContent{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem 0rem;
+    justify-content: space-evenly;
+    width: 100%;
+}

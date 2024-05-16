@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import NewProject from "./Pages/NewProject";
 import Projects from "./Pages/Projects";
 import Edit from "./Pages/Edit";
+import NotFound from "./Pages/NotFound";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,9 @@ const router = createBrowserRouter([
         },{
             element:<Edit/>,
             path:"projects/update/:IDproject"
+        },{
+            element: <NotFound/>,
+            path:"*"
         }]
     }
 ])

@@ -83,3 +83,24 @@ footer{
     font-size: .85rem;
 }
 
+@media (max-width: 768px) {
+    li{
+        font-size: 0.75rem;
+    }
+    .Same{
+        width: 0.85rem;
+    }
+    .HeaderContainer, footer{
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .CopyTitle, .ThankYou{
+        font-size: .65rem;
+    }
+    .ContentNav{
+        gap: 2.5rem;
+    }
+}
+

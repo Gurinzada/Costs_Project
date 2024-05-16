@@ -24,3 +24,14 @@
 .NewProject:hover{
     margin-left: 1rem;
 }
+
+@media (max-width: 768px) {
+    .CostImgContainer{
+        width: 8rem;
+    }
+
+    .NewProject{
+        height: 1.3rem;
+        width: 8rem;
+    }
+}

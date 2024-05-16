@@ -12,8 +12,8 @@ export default function Layout(){
                     <ul className="ContentNav">
                         <Link to="/"><li>Home</li></Link>
                         <Link to="/projects"><li>Projects</li></Link>
-                        <li>Contacts</li>
-                        <li>About us</li>
+                        <Link to={"*"}><li>Contacts</li></Link>
+                        <Link><li>Statistics</li></Link>
                     </ul>
                 </nav>
             </header>

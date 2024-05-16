@@ -3,6 +3,7 @@ import Layout from "./Pages/Layout";
 import Home from "./Pages/Home";
 import NewProject from "./Pages/NewProject";
 import Projects from "./Pages/Projects";
+import Edit from "./Pages/Edit";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,9 @@ const router = createBrowserRouter([
         },{
             element:<Projects/>,
             path:"projects"
+        },{
+            element:<Edit/>,
+            path:"projects/update/:IDproject"
         }]
     }
 ])

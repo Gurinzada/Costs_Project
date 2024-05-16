@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Layout{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.HeaderContainer{
+    background-color: #f2182b;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 2rem 2rem
+}
+
+.NavBar{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.ContentNav{
+    align-items: center;
+    display: flex;
+    gap: 3.5rem;
+    list-style: none;
+    justify-content: center;
+}
+
+li{
+    cursor: pointer;
+    font-size: 1.125rem;
+}
+
+li:hover{
+    text-decoration: underline;
+}
+
+a{
+    color: #030303;
+    text-decoration: none;
+}
+
+
+main{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    align-items: center;
+    background-color: #313131;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+.Same{
+    cursor: pointer;
+    width: 2.5rem;
+}
+
+.ContentForImgsProfile{
+    align-items: center;
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+}
+
+.CopyTitle, .ThankYou{
+    font-weight: 800;
+    font-size: .85rem;
+}
+

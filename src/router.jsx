@@ -5,6 +5,7 @@ import NewProject from "./Pages/NewProject";
 import Projects from "./Pages/Projects";
 import Edit from "./Pages/Edit";
 import NotFound from "./Pages/NotFound";
+import Statistics from "./Pages/Statistic";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,9 @@ const router = createBrowserRouter([
         },{
             element: <NotFound/>,
             path:"*"
+        },{
+            element:<Statistics/>,
+            path:"statistic"
         }]
     }
 ])

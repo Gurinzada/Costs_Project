@@ -13,7 +13,7 @@ export default function Layout(){
                         <Link to="/"><li>Home</li></Link>
                         <Link to="/projects"><li>Projects</li></Link>
                         <Link to={"*"}><li>Contacts</li></Link>
-                        <Link><li>Statistics</li></Link>
+                        <Link to={"/statistic"}><li>Statistics</li></Link>
                     </ul>
                 </nav>
             </header>

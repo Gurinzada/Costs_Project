@@ -13,12 +13,6 @@
       "id": "53a2"
     },
     {
-      "id": "7db3",
-      "Title": "Node Backend Master",
-      "Value": "5000.00",
-      "OptionProject": "Back-End"
-    },
-    {
       "id": "50af",
       "Title": "WordPress and PHP Dev",
       "Value": "1500.00",
@@ -31,10 +25,10 @@
       "OptionProject": "Software Test"
     },
     {
-      "id": "7a6f",
       "Title": "DBA",
-      "Value": "5150.99",
-      "OptionProject": "DB"
+      "Value": "6000.00",
+      "OptionProject": "DB",
+      "id": "7a6f"
     }
   ]
 }

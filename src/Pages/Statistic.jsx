@@ -15,18 +15,33 @@ export default function Statistics(){
     const [Full, setFull] = useState([])
     const [Quality, setQA] = useState([])
     const [Test, setTes] = useState([])
-
+    const [Most, setMost] = useState([])
 
     useEffect(() => {
         const fetchData = async () => {
             const data = await getDatas()
             setProjects(data)
             handleTypes(data)
+            handleExpensive(data)
             console.log(projects)
         }
         
         fetchData()
     },[])
+
+    const handleExpensive = (data) => {
+        const getTheHigh = []
+        data.forEach((project) => {
+            getTheHigh.push({Name: project.Title,
+                Value: project.Value
+            })
+        })
+        getTheHigh.sort((a,b) => a.Value - b.Value)
+        const JustOne = []
+        JustOne.push(getTheHigh[getTheHigh.length-1])
+        setMost(() => JustOne)
+        console.log(JustOne)
+    }
 
     const handleTypes = (data) => {
         const Mobile = []
@@ -73,6 +88,10 @@ export default function Statistics(){
 
     return(
         <section>
+            <div>
+                <h1>We have {projects.length} projects!</h1>
+            </div>
+            <div>
             <h1>Our Statistic Projects</h1>
             <div>
                 <h3>Back-End Projects</h3>
@@ -101,6 +120,22 @@ export default function Statistics(){
             <div>
                 <h3>Test Projects</h3>
                 <span>{Test.length}</span>
+            </div>
+            </div>
+            <div>
+                <h1>Most expensive Project</h1>
+                <div>
+                    <>
+                    {Most.map((item) => (
+                        <h3>{item.Name}</h3>
+                    ))}
+                    </>
+                    <>
+                    {Most.map((item) => (
+                        <span>R${item.Value}</span>
+                    ))}
+                    </>
+                </div>
             </div>
         </section>
     )

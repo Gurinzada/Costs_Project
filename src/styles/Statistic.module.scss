@@ -1,0 +1,21 @@
+.ContentStatistic{
+    align-items: flex-start;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.AllProjects{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ProjectsLength{
+    display: flex;
+    flex-direction: column;
+    gap: .95rem;
+    justify-content: center;   
+}
